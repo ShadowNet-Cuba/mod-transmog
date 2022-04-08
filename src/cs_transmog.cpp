@@ -32,9 +32,7 @@ public:
     {
         static ChatCommandTable HandleDisableTransMogVisual =
         {
-            { "add",        	HandleAddCommand,         SEC_GAMEMASTER,    Console::No },
-            { "delete",       	HandleDeleteCommand,      SEC_GAMEMASTER,    Console::No },
-            
+            { "add",        	HandleAddCommand,         SEC_GAMEMASTER,    Console::No },           
         };
 		static ChatCommandTable commandTable =
         {
