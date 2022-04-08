@@ -21,7 +21,7 @@
 #include "ScriptMgr.h"
 #include "Transmogrification.h"
 
-using namespace Acore::ChatCommands;
+//using namespace Acore::ChatCommands;
 
 class transmog_commandscript : public CommandScript
 {
