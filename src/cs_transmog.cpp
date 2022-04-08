@@ -36,7 +36,7 @@
 #include "IPLocation.h"
 #include "Language.h"
 #include "LFG.h"
-#include "MapManager.h"
+
 #include "MovementGenerator.h"
 #include "ObjectAccessor.h"
 #include "Opcodes.h"
