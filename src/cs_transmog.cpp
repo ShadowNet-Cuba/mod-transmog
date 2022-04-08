@@ -32,11 +32,11 @@ public:
     {
         static std::vector<ChatCommand> transmogCommandTable =
         {
-            { "add",        	HandleAddCommand,         SEC_GAMEMASTER,    Console::No }           
+            { "add", SEC_GAMEMASTER, true, &HandleAddCommand, "" }
         };
 		static std::vector<ChatCommand> commandTable =
         {
-            { "transmog", HandleDisableTransMogVisual, SEC_PLAYER, Console::No, transmogCommandTable }
+            { "transmog", SEC_PLAYER, true, &HandleDisableTransMogVisual,  "", transmogCommandTable }
         };
 
         return commandTable;
