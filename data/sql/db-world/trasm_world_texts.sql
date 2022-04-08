@@ -24,3 +24,7 @@ INSERT INTO `acore_string` (`entry`, `content_default`) VALUES
 DELETE FROM `command` WHERE `name` IN ('transmog');
 INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('transmog', 0, 'Syntax: .transmog <on/off>\nAllows seeing transmogrified items and the transmogrifier NPC.');
+
+DELETE FROM `command` WHERE `name` IN ('transmog add');
+INSERT INTO `command` (`name`, `security`, `help`) VALUES
+('transmog add', 0, 'Syntax: .transmog add\nAgrega un Item a la coleccion de trasmutacion del Jugador.');
