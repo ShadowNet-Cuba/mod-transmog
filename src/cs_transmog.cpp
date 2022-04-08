@@ -21,22 +21,18 @@
 #include "ScriptMgr.h"
 #include "Transmogrification.h"
 
-//using namespace Acore::ChatCommands;
+using namespace Acore::ChatCommands;
 
 class transmog_commandscript : public CommandScript
 {
 public:
     transmog_commandscript() : CommandScript("transmog_commandscript") { }
 
-    std::vector<ChatCommand> GetCommands() const override
+    ChatCommandTable GetCommands() const override
     {
-        static std::vector<ChatCommand> transmogCommandTable =
+        static ChatCommandTable commandTable =
         {
-            { "add", SEC_GAMEMASTER, true, &HandleAddCommand, "" }
-        };
-		static std::vector<ChatCommand> commandTable =
-        {
-            { "transmog", SEC_PLAYER, true, &HandleDisableTransMogVisual,  "", transmogCommandTable }
+            { "transmog", HandleDisableTransMogVisual, SEC_PLAYER, Console::No },
         };
 
         return commandTable;
