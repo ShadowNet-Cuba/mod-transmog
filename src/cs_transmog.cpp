@@ -28,15 +28,15 @@ class transmog_commandscript : public CommandScript
 public:
     transmog_commandscript() : CommandScript("transmog_commandscript") { }
 
-    ChatCommandTable GetCommands() const override
+    std::vector<ChatCommand> GetCommands() const override
     {
-        static ChatCommandTable transmogCommandTable =
+        static std::vector<ChatCommand> transmogCommandTable =
         {
             { "add",        	HandleAddCommand,         SEC_GAMEMASTER,    Console::No },           
         };
-		static ChatCommandTable commandTable =
+		static std::vector<ChatCommand> commandTable =
         {
-            { "transmog", HandleDisableTransMogVisual, SEC_PLAYER, Console::No, transmogCommandTable},
+            { "transmog", HandleDisableTransMogVisual, SEC_PLAYER, Console::No, transmogCommandTable },
         };
 
         return commandTable;
