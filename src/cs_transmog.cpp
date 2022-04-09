@@ -57,9 +57,15 @@ public:
 
     ChatCommandTable GetCommands() const override
     {
+		static ChatCommandTable transmogCommandTable =
+        {
+            { "add",        HandleAddCommand,            SEC_GAMEMASTER,    Console::No },
+            { "",           HandleDisableTransMogVisual, SEC_PLAYER,        Console::No }
+        };
+        
         static ChatCommandTable commandTable =
         {
-            { "transmog", HandleDisableTransMogVisual, SEC_PLAYER, Console::No },
+            { "transmog", SEC_PLAYER, Console::No, transmogCommandTable },
         };
 
         return commandTable;
