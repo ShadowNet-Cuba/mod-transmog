@@ -21,33 +21,6 @@
 #include "ScriptMgr.h"
 #include "Transmogrification.h"
 
-#include "AccountMgr.h"
-
-#include "ArenaTeamMgr.h"
-#include "BattlegroundMgr.h"
-#include "CellImpl.h"
-
-#include "GameGraveyard.h"
-#include "GridNotifiers.h"
-#include "Group.h"
-#include "GroupMgr.h"
-#include "GuildMgr.h"
-#include "InstanceSaveMgr.h"
-#include "IPLocation.h"
-#include "Language.h"
-#include "LFG.h"
-
-#include "MovementGenerator.h"
-#include "ObjectAccessor.h"
-#include "Opcodes.h"
-#include "Pet.h"
-
-#include "Realm.h"
-
-#include "SpellAuras.h"
-#include "TargetedMovementGenerator.h"
-#include "WeatherMgr.h"
-
 using namespace Acore::ChatCommands;
 
 class transmog_commandscript : public CommandScript
@@ -65,7 +38,7 @@ public:
         
         static ChatCommandTable commandTable =
         {
-            { "transmog", SEC_PLAYER, Console::No, transmogCommandTable },
+            { "transmog", transmogCommandTable }
         };
 
         return commandTable;
