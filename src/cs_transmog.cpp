@@ -132,7 +132,7 @@ public:
 			
 			else
 			{				
-				CharacterDatabase.Query("INSERT INTO `custom_unlocked_appearances` (`account_id`,`item_template_id`) VALUES ('{},{}')", playerTarget, itemId);
+				//CharacterDatabase.Query("INSERT INTO `custom_unlocked_appearances` (`account_id`,`item_template_id`) VALUES ('{},{}')", playerTarget, itemId);
 				ChatHandler(me->GetSession()).PSendSysMessage("Agregada: |cff4CFF00 %s|r El Item", itemId);
 			}
 			
