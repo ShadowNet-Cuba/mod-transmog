@@ -127,7 +127,7 @@ public:
 		{
 			if (result)
 			{
-				ChatHandler(me->GetSession()).PSendSysMessage("Ya el jugador tiene el Item: |cff4CFF00 %s|r", itemId.c_str());
+				ChatHandler(me->GetSession()).PSendSysMessage("Ya el jugador tiene el Item: |cff4CFF00 %s|r", itemId);
 			}
 			
 			else
