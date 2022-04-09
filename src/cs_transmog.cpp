@@ -95,7 +95,7 @@ public:
                     handler->SetSentErrorMessage(true);
                     return false;
                 }
-                itemId = result->Fetch()->GetUInt32();
+                //itemId = result->Fetch()->GetUInt32();
             }
             else
                 return false;
